@@ -1,19 +1,17 @@
+/**
+ * a class specify the features of the square
+ * author: Miray Ayerdem
+ * version : 03/11/2020
+ */
 public class Square extends Rectangle {
-    private double side;
+    private int side;
 
     public Square(int side)
     {
-        super(side,side);
+        super(side,side); //rectangle class is as a parent
         this.side = side;
+
     }
 
-    @Override
-    public double getArea()
-    {
-        double area;
-        area = side * side;
-        return area;
-    }
 
-    
 }

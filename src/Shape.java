@@ -65,7 +65,7 @@ public abstract class Shape implements Locatable, Selectable{
                 {
                     text = "The triangle having tha area: " + this.getArea() + " and the perimeter: " + this.getPerimeter() + " is selected";
                 }
-                
+
             return text;
         }
 
