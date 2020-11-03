@@ -32,7 +32,7 @@ public class ShapeTester {
             {
                 int a,b,c;
                 int x1, y1;
-                System.out.println("Enter x , y coordinates of the shape: "); 
+                System.out.println("Enter x , y coordinates of the shape: ");
                 x1 = in.nextInt();
                 y1 = in.nextInt();
                 System.out.println("1-Circle");
@@ -106,27 +106,29 @@ public class ShapeTester {
 
                for(int i = 0 ; i < myShape.shapes.size();i++)
                {
-                   if(myShape.shapes.get(i) == myShape.selectTheShape(x,y))
+                   if(myShape.shapes.get(i) == myShape.selectTheShape(x,y)) //specify the shapes features to print out
                    {
                        if(myShape.shapes.get(i) instanceof Square)
-                       System.out.println("The square having tha area: " + myShape.shapes.get(i).getArea() + " and the perimeter: " + myShape.shapes.get(i).getPerimeter() + " is removed";
+                       {
+                       System.out.println("The square having tha area: " + myShape.shapes.get(i).getArea() + " and the perimeter: " + myShape.shapes.get(i).getPerimeter() + " is removed");
                        myShape.shapes.remove(i);
-                   }
-                   else if(myShape.shapes.get(i) instanceof Rectangle) {
-                       System.out.println("The rectangle having tha area: " + myShape.shapes.get(i).getArea() + " and the perimeter: " + myShape.shapes.get(i).getPerimeter() + " is removed";
-                   myShape.shapes.remove(i);
-                   }
-                   else if(myShape.shapes.get(i) instanceof Triangle)
-                   {
-                       System.out.println("The triangle having tha area: " + myShape.shapes.get(i).getArea() + " and the perimeter: " + myShape.shapes.get(i).getPerimeter() + " is removed";
-                   myShape.shapes.remove(i);
-                   }
-                   else if(myShape.shapes.get(i) instanceof Circle)
-                   {
-                       System.out.println("The circle having tha area: " + myShape.shapes.get(i).getArea() + " and the circumference: " + myShape.shapes.get(i).getPerimeter() + " is removed";
-                   myShape.shapes.remove(i);
-                   }
+                       }
 
+                        else if(myShape.shapes.get(i) instanceof Rectangle) {
+                       System.out.println("The rectangle having tha area: " + myShape.shapes.get(i).getArea() + " and the perimeter: " + myShape.shapes.get(i).getPerimeter() + " is removed");
+                        myShape.shapes.remove(i);
+                         }
+                        else if(myShape.shapes.get(i) instanceof Triangle)
+                         {
+                        System.out.println("The triangle having tha area: " + myShape.shapes.get(i).getArea() + " and the perimeter: " + myShape.shapes.get(i).getPerimeter() + " is removed");
+                        myShape.shapes.remove(i);
+                        }
+                        else if(myShape.shapes.get(i) instanceof Circle)
+                        {
+                       System.out.println("The circle having tha area: " + myShape.shapes.get(i).getArea() + " and the circumference: " + myShape.shapes.get(i).getPerimeter() + " is removed");
+                        myShape.shapes.remove(i);
+                        }
+                   }
 
                }
                System.out.println(myShape);
