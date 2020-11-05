@@ -73,9 +73,17 @@ public class ShapeTester {
                     a = in.nextInt();
                     b = in.nextInt();
                     c = in.nextInt();
-                    myShape.add(new Triangle(a,b,c));
-                    myShape.shapes.get(myShape.shapes.size() - 1).setLocation(x1,y1);
-                    System.out.println("The triangle has been created!");
+                    if (a < b + c && a > Math.abs(b - c) && b < a + c && b > Math.abs(a - c) && c < b + a && c > Math.abs(b - a))
+                    {
+                        myShape.add(new Triangle(a, b, c));
+                        myShape.shapes.get(myShape.shapes.size() - 1).setLocation(x1, y1);
+                        System.out.println("The triangle has been created!");
+                    }
+                    else
+                    {
+                        System.out.println("The triangle cannot created with given side lengths!");
+                    }
+
                 }
             }
             else if(choice == 2) //for printing out all the shapes
@@ -106,7 +114,9 @@ public class ShapeTester {
 
                for(int i = 0 ; i < myShape.shapes.size();i++)
                {
-                   if(myShape.shapes.get(i) == myShape.selectTheShape(x,y)) //specify the shapes features to print out
+                   if(myShape.shapes.size() == 0)
+                       System.out.println("There is no shape!!!");
+                   else (myShape.shapes.get(i) == myShape.selectTheShape(x,y)) //specify the shapes features to print out
                    {
                        if(myShape.shapes.get(i) instanceof Square)
                        {

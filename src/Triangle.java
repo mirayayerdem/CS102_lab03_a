@@ -56,7 +56,7 @@ public class Triangle extends Shape {
         if (s3 > longSide)
             longSide = s3;
 
-        if (Math.pow(getX() - x, 2) + Math.pow(getY() - y, 2) <= Math.pow(longSide, 2)) {
+        if (Math.pow(getY() - y, 2) + Math.pow(getX() - x, 2) <= Math.pow(longSide, 2)) {
             return this;
         }
         return null;
